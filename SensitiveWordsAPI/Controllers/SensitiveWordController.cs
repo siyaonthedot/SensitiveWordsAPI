@@ -16,7 +16,6 @@ namespace SensitiveWordsAPI.Controllers
 {
     [Produces("application/json")]
     [Route("api/SensitiveWord")]
-    //[EnableCors("AllowOrigin")]
 
     public class SensitiveWordController : Controller
     {

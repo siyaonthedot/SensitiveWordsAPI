@@ -20,14 +20,14 @@ namespace SensitiveWordsAPI.BL.Service
             _appSettings = appSettings;
         }
 
-        public string MaskSensitiveWords(string sensitriveText, string connction)
+        public string MaskSensitiveWords(string sensitiveText, string connction)
         {
-            var sensitriveTextWords = sensitriveText.Split(" ");
+            var sensitiveTextWords = sensitiveText.Split(" ");
             StringBuilder maskWord = new StringBuilder();
             var data = _wordsRepostitory.GetAllSensitiveWords(connction);
 
             List<string> wordsList = new List<string>();
-            foreach (var item in sensitriveTextWords)
+            foreach (var item in sensitiveTextWords)
             {
 
                 var word = data.Where(s => s.WordContext.ToUpper() == item.ToUpper()).FirstOrDefault()?.WordContext;

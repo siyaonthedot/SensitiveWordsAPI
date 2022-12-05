@@ -32,7 +32,7 @@ namespace SensitiveWordsAPI.DAL.Utility
             return result;
         }
 
-        public static TData ExtecuteProcedureReturnData<TData>(string connString,string procName,
+        public  static TData ExtecuteProcedureReturnData<TData>(string connString,string procName,
             Func<SqlDataReader,TData> translator,
             params SqlParameter[] parameters)
         {
